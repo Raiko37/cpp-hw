@@ -1,0 +1,36 @@
+#pragma once
+#include "Student.h"
+#include "ScoreTable.h"
+#include "Letter.h"
+
+class Teacher
+{
+	std::vector<QuadraticEquation> equations; // уравнения для выдачи
+	std::vector<Student> students; // массив студентов
+	std::vector<Letter> uncheked_letters; // массив непроверенных писем
+	ScoreTable table; // таблица успеваемости
+
+public:
+
+	// конструктор 
+	Teacher(std::vector<QuadraticEquation> m_equations, std::vector<Student> m_students, std::vector<std::string> names);
+
+	~Teacher();
+
+	// возвращает количество непроверенных писем
+	int unchekedLettersAmount();
+
+	// выдаёт новые уравнения ученикам. Если решения прошлых не были запрошены через getLetters, то уравнения у учеников просто заменятся
+	void giveEquations();
+
+	// запрашивает письма у учеников и добавляет их в массив непроверенных писем
+	void getLetters();
+
+	// проверяет все скопившиеся письма
+	void checkLetters();
+
+
+	// печатает таблицу в консоль
+	void publishScores();
+};
+
