@@ -7,7 +7,7 @@ class Teacher
 {
 	std::vector<QuadraticEquation> equations; // уравнения для выдачи
 	std::vector<Student> students; // массив студентов
-	std::vector<Letter> uncheked_letters; // массив непроверенных писем
+	std::vector<Letter> unchecked_letters; // массив непроверенных писем
 	ScoreTable table; // таблица успеваемости
 
 public:
@@ -18,7 +18,7 @@ public:
 	~Teacher();
 
 	// возвращает количество непроверенных писем
-	int unchekedLettersAmount();
+	int uncheckedLettersAmount();
 
 	// выдаёт новые уравнения ученикам. Если решения прошлых не были запрошены через getLetters, то уравнения у учеников просто заменятся
 	void giveEquations();

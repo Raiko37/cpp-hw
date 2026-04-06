@@ -20,7 +20,7 @@ void ScoreTable::scoreUpdate(std::string name) {
 // собственно, печать таблицы
 void ScoreTable::printScores() {
 	std::cout << "\n";
-	for (auto& [name, score] : scores) {
+	for (const auto& [name, score] : scores) {
 		std::cout << name << ": " << score << "\n";
 	}
 }

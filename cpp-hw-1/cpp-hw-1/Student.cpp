@@ -3,27 +3,25 @@
 #include "Letter.h"
 #include "QuadraticEquation.h"
 #include "Functions.h"
-
-#include<string>
 #include<random>
+#include<string>
+#include "RandomGen.h"
 
 
 // решает уравнение с учетом типа ученика
 void Student::solveEquation(double& root_first, double& root_second) {
-	std::random_device rd;
-	std::mt19937 gen(rd());
 	std::uniform_int_distribution<int> dist(0, 1);
 
 	switch (type) {
 	case StudentType::GOOD:
-		NormalSolve(equation, root_first, root_second);
+		QuadraticEquation::normalSolve(equation, root_first, root_second);
 		break;
 	case StudentType::AVERAGE:
-		NormalSolve(equation, root_first, root_second);
+		QuadraticEquation::normalSolve(equation, root_first, root_second);
 
 
 
-		if (dist(gen)) {
+		if (dist(RandomGen::gen)) {
 			root_first += 1;
 			root_second -= 1;
 		}

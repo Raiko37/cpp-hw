@@ -5,7 +5,7 @@
 
 
 
-Letter::Letter(std::string name, QuadraticEquation equation, double root_first, double root_second) {
+Letter::Letter(std::string name, QuadraticEquation& equation, double root_first, double root_second) {
 	this->name = name;
 	this->equation = equation;
 	this->root_first = root_first;

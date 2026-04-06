@@ -130,6 +130,7 @@
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Letter.cpp" />
     <ClCompile Include="QuadraticEquation.cpp" />
+    <ClCompile Include="RandomGen.cpp" />
     <ClCompile Include="ScoreTable.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Student.cpp" />
@@ -139,6 +140,7 @@
     <ClInclude Include="Functions.h" />
     <ClInclude Include="Letter.h" />
     <ClInclude Include="QuadraticEquation.h" />
+    <ClInclude Include="RandomGen.h" />
     <ClInclude Include="ScoreTable.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="StudentType.h" />
