@@ -128,9 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Functions.cpp" />
-    <ClCompile Include="Letter.cpp" />
     <ClCompile Include="QuadraticEquation.cpp" />
-    <ClCompile Include="RandomGen.cpp" />
     <ClCompile Include="ScoreTable.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Student.cpp" />

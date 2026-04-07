@@ -1,9 +1,7 @@
 #pragma once
 #include<random>
-class RandomGen
+namespace RandomGen
 {
-public:
-	inline static std::mt19937 gen{ std::random_device{}()};
-
+	inline std::mt19937 gen{ std::random_device{}()};
 };
 

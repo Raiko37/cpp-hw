@@ -35,10 +35,7 @@ void Student::solveEquation(double& root_first, double& root_second) {
 
 
 
-Student::Student(std::string name, StudentType type) {
-	this->name = name;
-	this->type = type;
-}
+
 
 // сеттер для уравнения
 void Student::setEquation(QuadraticEquation equation) {

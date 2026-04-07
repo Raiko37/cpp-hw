@@ -15,7 +15,10 @@ private:
 
 
 public:
-	Student(std::string name, StudentType type);
+	Student(std::string& name, StudentType type) : name(name), type(type) {};
+
+
+	const std::string& getName() const { return name; }
 
 	// сеттер для уравнения
 	void setEquation(QuadraticEquation equation);

@@ -14,7 +14,7 @@
 Teacher::Teacher(std::vector<QuadraticEquation> m_equations, std::vector<Student> m_students, std::vector<std::string> names) :
 	equations(std::move(m_equations)),
 	students(std::move(m_students)),
-	table(std::move(names)) {
+	table(students) {
 }
 
 Teacher::~Teacher() {};
