@@ -3,18 +3,26 @@
 #include "QuadraticEquation.h"
 #include "Student.h"
 #include "ScoreTable.h"
-#include "Functions.h"
 #include<vector>
 #include "RandomGen.h"
-
+#include<iostream>
 
 
 
 // конструктор 
-Teacher::Teacher(std::vector<QuadraticEquation> m_equations, std::vector<Student> m_students, std::vector<std::string> names) :
+Teacher::Teacher(std::vector<QuadraticEquation> m_equations, std::vector<Student> m_students) :
 	equations(std::move(m_equations)),
-	students(std::move(m_students)),
-	table(students) {
+	students(std::move(m_students)) {
+
+	std::vector<std::string> names;
+	names.reserve(this->students.size());
+
+	for (const auto& student : students) {
+		names.push_back(student.getName());
+	}
+	std::cout << students.size();
+
+	this->table = ScoreTable(names);
 }
 
 Teacher::~Teacher() {};

@@ -27,7 +27,7 @@
 
 
 // достаёт из текстового файла данные построчно 
-void ParseFile(std::vector<std::string>& arr, std::string& file_name) {
+void ParseFile(std::vector<std::string>& arr, const std::string& file_name) {
 	std::fstream file(file_name);
 
 	if (!file.is_open()) {
@@ -156,7 +156,7 @@ void StartModel() {
 	}
 
 
-	Teacher teacher(std::move(equations), std::move(students), std::move(names)); // перемещение через move, тут эти массивы уже не нужны будут
+	Teacher teacher(std::move(equations), std::move(students)); // перемещение через move, тут эти массивы уже не нужны будут
 	// преподаватель создан
 
 	Interface(teacher);

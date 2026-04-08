@@ -13,7 +13,7 @@ class Teacher
 public:
 
 	// конструктор 
-	Teacher(std::vector<QuadraticEquation> m_equations, std::vector<Student> m_students, std::vector<std::string> names);
+	Teacher(std::vector<QuadraticEquation> equations, std::vector<Student> students);
 
 	~Teacher();
 

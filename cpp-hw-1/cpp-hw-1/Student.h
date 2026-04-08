@@ -15,13 +15,15 @@ private:
 
 
 public:
-	Student(std::string& name, StudentType type) : name(name), type(type) {};
+	Student(const std::string& name, const StudentType type) : name(name), type(type) {};
 
 
 	const std::string& getName() const { return name; }
 
 	// сеттер для уравнения
-	void setEquation(QuadraticEquation equation);
+	void setEquation(const QuadraticEquation& equation){
+		this->equation = equation;
+	};
 
 	// составляет и возвращает письмо с решениями
 	Letter composeLetter();

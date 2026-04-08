@@ -6,7 +6,7 @@
 
 
 
-void ParseFile(std::vector<std::string>& arr, std::string& file_name);
+void ParseFile(std::vector<std::string>& arr, const std::string& file_name);
 
 void PrintSep();
 

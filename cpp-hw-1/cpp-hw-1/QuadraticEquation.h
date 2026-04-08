@@ -11,10 +11,10 @@ public:
 	QuadraticEquation() = default; // он подчёркивает красным пустое место, но всё компилируется
 
 	// получение из строки формата "a b c"
-	QuadraticEquation(std::string equation_string);
+	QuadraticEquation(const std::string equation_string);
 
 	~QuadraticEquation();
 
-	static void normalSolve(QuadraticEquation& eq, double& root_first, double& root_second);
+	static void normalSolve(const QuadraticEquation& eq, double& root_first, double& root_second);
 };
 

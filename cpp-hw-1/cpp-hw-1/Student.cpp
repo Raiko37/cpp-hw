@@ -2,9 +2,7 @@
 #include "StudentType.h"
 #include "Letter.h"
 #include "QuadraticEquation.h"
-#include "Functions.h"
 #include<random>
-#include<string>
 #include "RandomGen.h"
 
 
@@ -37,10 +35,7 @@ void Student::solveEquation(double& root_first, double& root_second) {
 
 
 
-// сеттер для уравнения
-void Student::setEquation(QuadraticEquation equation) {
-	this->equation = equation;
-}
+
 
 // составляет и возвращает письмо с решениями
 Letter Student::composeLetter() {
